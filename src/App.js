@@ -2,7 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 
 import React, { useState } from 'react';
-import {useTelegram} from "./hooks/useTelegram";
+import WebApp from '@twa-dev/sdk'
+
+WebApp.showAlert('Hey there!');
+
+
 
 const books = [
   { id: 1, title: "To Kill a Mockingbird", emoji: "📚" },
@@ -55,8 +59,6 @@ const BookList = () => {
 
 
 function App() {
-  const {webApp} = useTelegram()
-  webApp.showAlert('Hello from Telegram')
   return (
     <div className="App">
       <header className="App-header">
